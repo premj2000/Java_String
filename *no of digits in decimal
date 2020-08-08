@@ -1,0 +1,44 @@
+/*************After decimal point*******************/
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main
+{
+	public static void main (String[] args) 
+	{
+		String str1=String.format("%.2f",6.845834);             //no of digits after decimal point
+		String str2=String.format("%.6f",6.845834);
+		String str3=String.format("%.10f",6.845834);
+		
+		System.out.println(str1);
+		System.out.println(str2);
+		System.out.println(str3);
+	}
+}
+output:
+-------
+6.85                                                                                                                          
+6.845834                                                                                                                      
+6.8458340000      //adds extra zeros if digits not present
+
+======================================================================================================================================================================
+
+/*************add space before *********************/
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main
+{
+	public static void main (String[] args)
+	{
+		String str1=String.format("%9f",6.8458);
+		String str2=String.format("%09f",6.8458);
+		System.out.println(str1);
+		System.out.println(str2);
+	}
+}
+
+output:
+---------
+_6.845800     //total digits+2=>1 space                                                                                                                 
+06.845800			
