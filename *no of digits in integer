@@ -5,9 +5,9 @@ class Main
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-    String str1=String.format("%09d",4346); //to total digits to display with extra zeros
+   		 String str1=String.format("%09d",4346); 	//to total digits to display with extra zeros
 		System.out.println(str);
-		String str2=String.format("%9d",4346);   //to total digits to display with extra spaces
+		String str2=String.format("%9d",4346);   	//to total digits to display with extra spaces
 		System.out.println(str);
 	}
 }
