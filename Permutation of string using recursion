@@ -1,0 +1,42 @@
+/*string permutation using recursive*/
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    String s = "abc";                             //input
+      permutations (s, 0, s.length () - 1);
+  }
+  public static void permutations (String s, int l, int r)
+  {
+    if (l == r)
+      {
+	    System.out.println (s);
+	    return;
+      }
+    for (int i = l; i <= r; i++)
+      {
+	    s = swap (s, l, i);
+	    permutations (s, l + 1, r);
+
+      }
+  }
+  public static String swap (String s, int x, int y)
+  {
+    char arr[] = s.toCharArray ();
+    char temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+
+    return new String (arr);
+  }
+}
+
+output:
+-------
+abc      
+acb                                                                                                                           
+bac                                                                                                                           
+bca                                                                                                                           
+cab                                                                                                                           
+cba 
